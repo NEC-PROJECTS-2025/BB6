@@ -1,0 +1,111 @@
+
+
+/* Header Styling */
+.header-title {
+    background-color:;
+    margin-top: 1%;
+    color:solid #3e9854;
+    font-weight: 900;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+body{
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-weight: 900;
+
+}
+
+/* Contact Section Styling */
+.contact-section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #39862d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #41c708;
+}
+
+/* Success Message Styling */
+.success-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

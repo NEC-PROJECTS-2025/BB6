@@ -1,0 +1,105 @@
+/* Apply a full-page background image */
+body {
+    background: url('/static/images/mobile_phone.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+
+/* Blurred overlay effect */
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1;
+}
+
+/* Content container for better visibility */
+.content-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling header and sections */
+header, .feature-section {
+    background: rgb(255, 255, 255); /* Dark semi-transparent overlay */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+    color: rgb(0, 255, 170);
+}
+
+/* Table styling */
+.feature-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.85); /* Light transparency */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.feature-table th, .feature-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.feature-table th {
+    background: linear-gradient(45deg, #3e9854, #237a39);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.feature-table td {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.feature-table td:hover {
+    background: rgba(62, 152, 84, 0.2);
+}
+h1{color: #fff;
+}
+
+
+/* Mobile Features and Specifications */
+/* Mobile Features and Specifications */
+header h1 {
+    color: #2c3e50; /* Dark navy for a professional look */
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #3e9854; /* Green accent underline */
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+/* Mobile Features Comparison */
+.feature-section .section-title {
+    color: #d35400; /* Deep orange for contrast */
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px dashed #d35400; /* Dashed underline */
+}
+

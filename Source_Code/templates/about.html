@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/index.css"/>
+    <link rel="stylesheet" href="/templates/index.js"/>
+    <link rel="stylesheet" href="/static/about.css"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik Microbe' rel='stylesheet'>
+    <title>mobile price prediction</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+
+
+
+
+<div class="nav-back">
+ 
+    <ul class="nav nav-underline" >     
+                   <div class="logo-pos">           
+                     <li class="nav-item">
+                             <div class="logo">
+                                <img src="/static/images/ml-logo_-removebg-preview.png" alt="">
+                              </div>
+                             
+       
+                      </li>
+                    </div>
+               
+              <div class="nav-l-pos">
+                      <li class="nav-item">
+                            <h3>Mobile price pattern prediction</h3>
+                      </li>
+              </div>
+
+
+
+              <div class="nav-l-pos1">
+                       <li class="nav-item">
+                             <a class="nav-link  fw-semibold"  href="{{url_for('home')}}" >Home</a>
+                       </li>
+              </div>
+              <div class="nav-l-pos">
+                       <li class="nav-item">
+                             <a class="nav-link fw-semibold"  href="{{url_for('about')}}" >About us</a>
+                       </li>
+              </div>
+              <div class="nav-l-pos">
+                <li class="nav-item">
+                      <a class="nav-link fw-semibold"  href="{{url_for('contact')}}" >Contact us</a>
+                </li>
+              </div>
+              <div class="nav-l-pos">
+                        <li class="nav-item">
+                             <a class="nav-link fw-semibold"  href="{{url_for('prediction')}}" >Prediction of mobile price patterns</a>
+                        </li>
+              </div>
+
+
+
+
+    </ul>
+</div>
+
+<h2 class="header-title">About Us</h2>
+
+<!-- About Us Content -->
+<div class="about-container">
+
+
+    <section class="team-section">
+        <h2 class="section-title">OUR TEAM</h2>
+
+        <!-- Students Section -->
+        <section class="student-group">
+            <h4 class="group-title">Students</h4>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/st1.jpg" alt="Student 1">
+                    <figcaption>
+                        <strong>Y.Rambabu</strong> - Passionate about machine learning and data science, has been integral in developing and optimizing our pricing algorithms.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/st2.jpg" alt="Student 2">
+                    <figcaption>
+                        <strong>P.Rajashekar</strong> - A tech enthusiast with a deep interest in market trends, focuses on data collection and model testing to ensure accurate predictions.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/st3.jpg" alt="Student 3">
+                    <figcaption>
+                        <strong>B.Suhas</strong> - With a strong background in software development, has contributed to building the website and integrating the machine learning models into a seamless user experience.
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- Guides Section -->
+        <section class="guide-group">
+            <h4 class="group-title">Guides</h4>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/guide1.jpg" alt="Guide 1">
+                    <figcaption>
+                        <strong>sk.Rafi</strong> - A seasoned industry expert in AI, provides valuable insights into the application of machine learning in real-world business solutions.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/guide2.jpg" alt="Guide 2">
+                    <figcaption>
+                        <strong>M.Satyam Reddy</strong> - With extensive experience in the smartphone market, helps shape our approach to market trends and pricing strategies.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/guide3.jpg" alt="Guide 3">
+                    <figcaption>
+                        <strong>M.Srireesha</strong> - A mentor with a background in business development, guides our monetization strategies and business growth.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="team-member">
+                <figure>
+                    <img class="team-member-image" src="/static/images/guide4.jpg" alt="Guide 4">
+                    <figcaption>
+                        <strong>D.Venkata Reddy</strong> - Specializing in cloud infrastructure, ensures that our platform is scalable, secure, and ready for deployment.
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text">Committed to revolutionizing the smartphone pricing landscape with cutting-edge solutions.</p>
+    </footer>
+</div>
+
+
+
+    </body>
+    </html>
+

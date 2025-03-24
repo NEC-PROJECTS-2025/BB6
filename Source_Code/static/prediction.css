@@ -1,0 +1,145 @@
+
+
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+select {
+   /* Full width */
+    padding: 10px; /* Padding inside the select */
+    font-size: 16px; /* Font size for the select text */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-sizing: border-box; /* To make the padding part of the total width */
+    margin-bottom: 10px; /* Space between elements */
+
+}
+
+/* Style the options */
+option {
+    font-size: 16px; /* Font size for options */
+    padding: 10px; /* Padding for option items */
+    background-color: #fff; /* Background color for options */
+    color: #333; /* Text color */
+}
+
+/* Add hover effect to the options */
+option:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+/* Style for the select box when focused */
+select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #007bff; /* Change border color on focus */
+}
+input[type="number"], input[type="radio"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+   height: 40px;
+}
+
+input[type="number"]:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px #2575fc;
+    height: 40px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+button {
+    background: #2575fc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:background 0.3s ease;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+
+.form-h{
+background-color: #74cff3;
+border-radius:25px;
+box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+height: 30px;
+margin-bottom:20px;
+color:white;
+
+}
+ h5{
+text-align: center;
+color:white;
+font-weight:600;}
+.user-image{
+
+
+    margin-top: 12.5%;
+    border-radius: 50%;
+width:5%px;
+height: 300px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; 
+
+border-color: linear-gradient(333deg, rgba(36,28,178,1) 11%, rgba(16,170,38,1) 55%, rgba(195,255,0,1) 82%);  }
+
+.image{
+    margin-top: 6%;
+    border-radius: 10%;
+    background: rgb(255,233,0);
+    background: radial-gradient(circle, rgba(255,233,0,1) 19%, rgba(16,170,38,1) 46%, rgba(19,238,241,0.886787991563813) 84%); 
+
+
+}
+.box{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    
+}

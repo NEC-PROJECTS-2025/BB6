@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/result.css">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main></main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <div class="container mt-5">
+            <div class="card custom-card shadow-lg">
+              <div class="custom-card-header" id="process">
+                Prediction Processing..
+              </div>
+              <div class="custom-card-body">
+
+                <p id="msg"></p>
+                 <p id="resultMessage">The result is ready for view in 4 seconds...</p> 
+                 
+         <!--     {% if predict %}
+                  {% endif %}
+                  <p >Your prediction has been completed successfully!</p>
+                  -->   
+                
+                  <a href="{{url_for('prediction')}}">   <button class="btn" id="okButton">OK</button></a>
+              </div>
+            </div>
+          </div>
+<script>
+            // Reference to the result message element
+            const resultMessage = document.getElementById("resultMessage");
+            const processMessage=document.getElementById("process");
+            const msgMessage=document.getElementById("msg");
+            // Countdown function
+            let secondsLeft = 4;
+        
+            const countdown = setInterval(() => {
+              secondsLeft -= 1;
+              if (secondsLeft > 0) {
+                 
+                resultMessage.textContent = `The result is ready for view in ${secondsLeft} seconds...`;
+                
+              } else {
+                clearInterval(countdown); // Stop the countdown
+                resultMessage.textContent = "{{predict}}";
+                resultMessage.style.color ="#734bea";
+
+                msgMessage.textContent="Your prediction has been completed successfully!"
+                processMessage.textContent="Success";
+                
+          
+              }
+            }, 1000); // Update every 1 second
+ </script>
+
+
+
+    </body>
+</html>

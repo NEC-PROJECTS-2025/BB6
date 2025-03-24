@@ -1,0 +1,222 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/prediction.css"/>
+    <link rel="stylesheet" href="/static/index.css">
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik Microbe' rel='stylesheet'>
+    <title>mobile price prediction</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+
+
+
+
+   <div class="nav-back">
+ 
+    <ul class="nav nav-underline" >     
+                   <div class="logo-pos">           
+                     <li class="nav-item">
+                             <div class="logo">
+                                <img src="/static/images/ml-logo_-removebg-preview.png" alt="">
+                              </div>
+                             
+       
+                      </li>
+                    </div>
+               
+              <div class="nav-l-pos">
+                      <li class="nav-item">
+                            <h3>Mobile price pattern prediction</h3>
+                      </li>
+              </div>
+
+
+
+
+              <div class="nav-l-pos1">
+                <li class="nav-item">
+                      <a class="nav-link  fw-semibold"  href="{{url_for('home')}}" >Home</a>
+                </li>
+       </div>
+       <div class="nav-l-pos">
+                <li class="nav-item">
+                      <a class="nav-link fw-semibold"  href="{{url_for("about")}}" >About us</a>
+                </li>
+       </div>
+       <div class="nav-l-pos">
+         <li class="nav-item">
+               <a class="nav-link fw-semibold"  href="{{url_for('contact')}}" >Contact us</a>
+         </li>
+       </div>
+              <div class="nav-l-pos">
+                        <li class="nav-item">
+                             <a class="nav-link fw-semibold"  href="{{url_for('prediction')}}" >Prediction of mobile price patterns</a>
+                        </li>
+              </div>
+
+
+
+
+    </ul>
+</div>
+
+
+<div class="box">
+
+<div class="image">
+    <img class="user-image" src="/static/images/user1.png"/>
+</div>
+
+<div class="form-box">
+
+   
+    <div class="form">
+        <div class="form-h"><h5>Enter your Mobile features to know your price patterns</h5></div>
+        <form action="/cost" method="POST" id="interactiveForm">
+           
+            <label for="battery_power">Battery Power (mAh) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="battery_power" name="battery_power" placeholder="Total energy a battery can store in one time, measured in mAh" required>
+            <span class="error" id="batteryPowerError"></span>
+    
+            <label for="bluetooth">Bluetooth Availability <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="bluetooth" id="bluetooth" required>
+                <option value="">--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <label for="clock_speed">Clock Speed (GHz) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="clock_speed" name="clock_speed" step="any" min="0" max="4" placeholder="Speed at which the microprocessor executes instructions (GHz)" required>
+            <span class="error" id="clockSpeedError"></span>
+    
+            <label for="dual_sim">Dual SIM Support <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="dual_sim" id="dual_sim" required>
+                <option value="">--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <label for="front_camera_mpixels">Front Camera (mp) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="front_camera_mpixels" name="front_camera_mpixels" placeholder="Front Camera megapixels">
+    
+            <label for="has_4g">4G Support <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="has_4g" id="has_4g" required>
+                <option value="">--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <label for="int_memory">Internal Memory (GB) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="int_memory" name="int_memory" placeholder="enter internal-storage in Gigabytes" required>
+    
+            <label for="m_dep">Mobile Depth (cm) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="m_dep" name="m_dep" step="any" min="0" max="1" placeholder="enter mobile depth in cm" required>
+    
+            <label for="mobile_wt">Mobile Weight (grams) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="mobile_wt" name="mobile_wt" placeholder="enter weight of mobile in grams" required>
+    
+            <label for="n_cores">Number of Processor Cores <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="n_cores" name="n_cores" min="1" max="8" placeholder="enter Number of cores in the processor" required>
+    
+            <label for="pc">Primary Camera (MP) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="pc" name="pc" min="0" max="200" placeholder="enter Primary Camera megapixels" required>
+    
+            <label for="px_height">Pixel Height (px) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="px_height" name="px_height" min="240" max="3200" placeholder="enter Pixel Resolution Height in pixels " required>
+    
+            <label for="px_width">Pixel Width (px) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="px_width" name="px_width" min="240" max="3840" placeholder="Pixel Resolution Width in pixels" required>
+    
+            <label for="ram">RAM (MB) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="ram" name="ram" placeholder="enter ram size in MB" required>
+    
+            <label for="sc_h">Screen Height (cm) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="sc_h" name="sc_h" placeholder="enter Screen Height in cm" required>
+    
+            <label for="sc_w">Screen Width (cm) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="sc_w" name="sc_w" placeholder="enter Screen Width of the mobile phone in cm" required>
+    
+            <label for="talk_time">Talk Time (hours) <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <input type="number" id="talk_time" name="talk_time" placeholder="enter Longest time a single battery charge lasts during a call (hours)" required>
+    
+            <label for="has_3g">3G Support <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="has_3g" id="has_3g" required>
+                <option value="">--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <label for="touch_screen">Touch Screen Availability <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="touch_screen" id="touch_screen" required>
+                <option value="">--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <label for="wifi">WiFi Support <i class="fa-sharp fa-solid fa-star-of-life fa-2xs" style="color: #ff0000;"></i></label>
+            <select name="wifi" id="wifi" required>
+                <option value="" disabled selected>--Select an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+
+</div>
+<div class="image">
+    <img class="user-image" src="/static/images/user2.png"/>
+</div>
+
+</div>
+
+    <script>
+        document.getElementById("interactiveForm").addEventListener("submit", function (event) {
+            const batteryPower = document.getElementById("battery_power").value;
+            const clockSpeed = document.getElementById("clock_speed").value;
+
+            let hasError = false;
+
+            if (batteryPower <= 0) {
+                document.getElementById("batteryPowerError").textContent = "Battery power must be greater than zero.";
+                hasError = true;
+            } else {
+                document.getElementById("batteryPowerError").textContent = "";
+            }
+
+            if (clockSpeed <= 0 || clockSpeed > 5) {
+                document.getElementById("clockSpeedError").textContent = "Clock speed must be between 0 and 5 GHz.";
+                hasError = true;
+            } else {
+                document.getElementById("clockSpeedError").textContent = "";
+            }
+
+            if (hasError) {
+                event.preventDefault();
+            }
+        });
+    </script>
+ 
+</body>
+</html>
+

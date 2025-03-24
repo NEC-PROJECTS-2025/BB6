@@ -1,0 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+
+
+}
+
+h3{
+    font-family:'Rubik Microbe';
+    font-weight: 900;
+    box-shadow: 0 0 50px #fd8f8f;
+}
+
+ul li{
+margin-left: 20px;
+}
+.navbar{
+ margin-left: 500px;
+}
+.nav.nav-underline{
+   color: #ee2424;
+
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    position: relative;
+    background: #ee2424;
+    box-shadow: 0 0 5px 5px red;
+}
+
+.nav-l-pos{
+    margin-top:25px;
+    margin-left:19px;
+   
+
+}
+.nav-l-pos1{
+    margin-top:25px;
+    margin-left: 110px;
+
+
+
+}
+
+.logo-pos{
+    margin-left:50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.nav-back{
+    background-color: #eed42b;
+    box-shadow: 0 0 5px 5px red;
+}
+
+
+

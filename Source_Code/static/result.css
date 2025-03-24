@@ -1,0 +1,74 @@
+
+
+  .custom-card {
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .custom-card-header {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+  }
+
+  .custom-card-body {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-card-body p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+
+  .custom-card-body button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .custom-card-body button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .predict-line{
+
+    font-size: 25px;
+    background: -webkit-linear-gradient(#3516ff, #ff01dd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  a{
+    list-style-type: none;
+    text-decoration: none;
+    color:white;
+  }
+  a:hover{
+    color:black;
+  }
